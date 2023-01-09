@@ -35,7 +35,7 @@ const getCurrencies = async () => {
 
 //Dibujar el gráfico
 const drawChart = async () => {
-//    try {
+    try {
         const currency =
             selectWithCurrencies.options[
                 selectWithCurrencies.selectedIndex
@@ -64,9 +64,9 @@ const drawChart = async () => {
         const chartDOM = document.querySelector('#chart');
         new Chart(chartDOM, config);
         chartDOM.classList.remove('d-none');
-//    } catch (error) {
-//        alert('Error al obtener la data para el gráfico');
-//    }
+    } catch (error) {
+        alert('Error al obtener la data para el gráfico');
+    }
 };
 
 //Llamar a la función al hacer click en el botón
