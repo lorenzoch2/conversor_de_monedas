@@ -29,7 +29,6 @@ const getCurrencies = async () => {
             selectWithCurrencies.appendChild(option);
         });
     } catch (error) {
-        console.log(error);
         alert('Error al obtener el listado de monedas')
     }
 };
@@ -54,7 +53,7 @@ const drawChart = async () => {
                 {
                     label: currency,
                     data: serieToChart.map((item) => item.valor),
-                }
+                },
             ]
         };
         const config = {
@@ -67,7 +66,6 @@ const drawChart = async () => {
         chartDOM.classList.remove('d-none');
     } catch (error) {
         alert('Error al obtener la data para el gráfico');
-        console.log(error);
     }
 };
 
@@ -78,7 +76,6 @@ document.querySelector('#btnConvert').addEventListener('click', () => {
         alert('Debes ingresar una cantidad de pesos');
         return;
     }
-    
     divResult.innerHTML = calcResult(amountPesos);
     drawChart();
 });
