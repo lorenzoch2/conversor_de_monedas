@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+hr{
+    color: white
+}
+
+.box{
+    margin: auto;
+    padding: 30px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    
+}
+
+.form-control{
+    width: 350px;
+}
