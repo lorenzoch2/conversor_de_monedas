@@ -1,11 +1,11 @@
-const urlApi = `https://mindicador.cl/api/`;
+const urlApi = `https://mindicador.cl/api`;
 const filterCurrencies = ['dolar', 'euro', 'uf', 'utm'];
 const selectWithCurrencies = document.querySelector('#currency');
 const divResult = document.querySelector('#result');
 
 const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 const calcResult = (amount) =>
-    `$ ${(amount / selectWithCurrencies.value).toFixed(2)} .-`
+    `$ ${(amount / selectWithCurrencies.value).toFixed(2)}`
 
 //Obtener las monedas desde la API
 const getCurrencies = async () => {
@@ -35,7 +35,7 @@ const getCurrencies = async () => {
 
 //Dibujar el gráfico
 const drawChart = async () => {
-    try {
+//    try {
         const currency =
             selectWithCurrencies.options[
                 selectWithCurrencies.selectedIndex
@@ -64,9 +64,9 @@ const drawChart = async () => {
         const chartDOM = document.querySelector('#chart');
         new Chart(chartDOM, config);
         chartDOM.classList.remove('d-none');
-    } catch (error) {
-        alert('Error al obtener la data para el gráfico');
-    }
+//    } catch (error) {
+//        alert('Error al obtener la data para el gráfico');
+//    }
 };
 
 //Llamar a la función al hacer click en el botón
