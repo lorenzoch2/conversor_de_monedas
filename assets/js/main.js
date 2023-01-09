@@ -34,13 +34,8 @@ const getCurrencies = async () => {
     }
 };
 
-//Transformar los pesos a la divisa (currency) seleccionada
-//const calcResult = (amount, currency) => {
-//    divResult.innerHTML = `$ ${(amount / currency).toFixed(2)} .-`;
-//};
-
 //Dibujar el gráfico
-const drawChart = async (currency) => {
+const drawChart = async () => {
     try {
         const currency =
             selectWithCurrencies.options[
